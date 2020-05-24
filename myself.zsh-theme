@@ -1,4 +1,5 @@
 # myself.zsh-theme
+# copy to ~/.oh-my-zsh/custom/theme/
 
 # settings
 typeset +H return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
@@ -38,6 +39,5 @@ ZSH_THEME_HG_PROMPT_SUFFIX="%{$reset_color%} "
 ZSH_THEME_HG_PROMPT_DIRTY="%{$fg_bold[blue]%}) %{$fg[yellow]%}✗"
 ZSH_THEME_HG_PROMPT_CLEAN="%{$fg_bold[blue]%})"
 
-# virtualenv settings
 ZSH_THEME_VIRTUALENV_PREFIX=" $FG[075]["
 ZSH_THEME_VIRTUALENV_SUFFIX="]%{$reset_color%}"

@@ -11,8 +11,8 @@ CARE=$(printf '\033[42m')
 # depends
 # install latest tmux
 
-echo "${GREEN}\n\nStart install\n\n${RESET}"
-sudo apt-get install -y git vim zsh fonts-powerline automake bison build-essential pkg-config libevent-dev libncurses5-dev
+echo "${GREEN}\n\nStart install maybe you need\n\n${RESET}"
+sudo apt-get install -y git mosh htop vim zsh fonts-powerline automake bison build-essential pkg-config libevent-dev libncurses5-dev
 
 echo "${GREEN}\n\nStart install latest tmux\n\n${RESET}"
 rm -fr /tmp/tmux
@@ -41,6 +41,11 @@ git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 echo "${GREEN}\n\nvimrc finish!!!!\n\n${RESET}"
 
+# instal gdb-peda
+git clone https://github.com/longld/peda.git ~/peda
+echo "source ~/peda/peda.py" >> ~/.gdbinit
+echo "${GREEN}\nDONE! debug your program with gdb and enjoy\n${RESET}"
+
 # oh my zsh
 echo "${CARE}\n\nstart install oh my zsh \n PLEASE EXIT ZSH!!!!!\n\n${RESET}"
 echo "${CARE}\n\nremember exit zsh\n\n${RESET}"
@@ -50,7 +55,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 cp myself.zsh-theme ~/.oh-my-zsh/custom/themes
 echo "ZSH_THEME=\"myself\"" >> ~/.zshrc
+echo "plugins=(git cp z per-directory-history) " >> ~/.zshrc
 echo "source \$ZSH/oh-my-zsh.sh" >> ~/.zshrc
 echo "source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
 echo "source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
-echo "${CARE}\n\nDon't forget to restart your terminal! finish!!!!!\n\n${RESET}"
+echo "${GREEN}\n\nDon't forget to restart your terminal! finish!!!!!\n\n${RESET}"
