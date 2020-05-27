@@ -16,4 +16,4 @@ sudo rm -rf ~/.oh-my-zsh
 sudo apt-get remove zsh
 uninstall_oh_my_zsh
 
-echo "${CARE}Don't forget to restart your terminal! finish!!!!!${RESET}"
+echo "${GREEN}Don't forget to restart your terminal! finish!!!!!${RESET}"
