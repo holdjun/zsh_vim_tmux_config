@@ -10,7 +10,10 @@ CARE=$(printf '\033[42m')
 
 # depends
 echo "${BLUE}\nStart install maybe you need\n${RESET}"
-sudo apt-get install -y git gdb mosh htop vim zsh fonts-powerline automake bison build-essential pkg-config libevent-dev libncurses5-dev
+sudo apt-get install -y git gdb snapd mosh htop vim zsh fonts-powerline automake bison build-essential pkg-config libevent-dev libncurses5-dev
+
+# install vscode 
+sudo snap install code-insiders --classic
 
 # install latest tmux
 echo "${BLUE}\nStart install latest tmux\n${RESET}"
