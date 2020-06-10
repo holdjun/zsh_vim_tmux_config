@@ -62,4 +62,5 @@ echo "plugins=(git cp z per-directory-history) " >>~/.zshrc
 echo "source \$ZSH/oh-my-zsh.sh" >>~/.zshrc
 echo "source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >>~/.zshrc
 echo "source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" >>~/.zshrc
+echo "set -o nonomatch" >> ~/.zshrc
 echo "${GREEN}\nDon't forget to restart your terminal! finish!!!!!\n${RESET}"
